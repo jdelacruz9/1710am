@@ -4,13 +4,19 @@ require("sendgrid-php/sendgrid-php.php");
 
 $sendgrid = new SendGrid('jdelacruz', 'Bjoel1995');
 $mail = new SendGrid\Email();
+
+$name = $_POST['name'];
+$from = $_POST["from"]; 
+$message = $_POST["message"];
 $mail->addTo('jjdl_cn@hotmail.com') ->
-       setFrom('me@bar.com')->
-       setSubject('Subject goes here')->
-       setText('Hello World!')->
+       setFrom($from)->
+       setFromName($name)->
+       setSubject('Hello')->
+       setText($message)->
        setHtml('<strong>Hello World!</strong>');
 
 $sendgrid->send($mail);
+// $mail->removeTo($from);
 
 // if (isset($_POST["from"]))
 // {
