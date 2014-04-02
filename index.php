@@ -1,5 +1,5 @@
  <?php
-header( 'Location: http://www.facebook.com/' ) ;
+// header( 'Location: http://www.facebook.com/' ) ;
 require("sendgrid-php/sendgrid-php.php");
 
 
@@ -7,7 +7,7 @@ $sendgrid = new SendGrid('jdelacruz', 'Bjoel1995');
 $mail = new SendGrid\Email();
 
 $name = $_POST['name'];
-$from = $_POST["from"]; 
+$from = $_POST['email']; 
 $message = $_POST["message"];
 
 $mail->addTo('jjdl_cn@hotmail.com');
