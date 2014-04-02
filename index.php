@@ -9,14 +9,12 @@ $name = $_POST['name'];
 $from = $_POST["from"]; 
 $message = $_POST["message"];
 $mail->addTo('jjdl_cn@hotmail.com') ->
-       setFrom($from)->
-       setFromName($name)->
-       setSubject('Hello')->
-       setText($message)->
+       setFrom('me@bar.com')->
+       setSubject('Subject goes here')->
+       setText('Hello World!')->
        setHtml('<strong>Hello World!</strong>');
 
 $sendgrid->send($mail);
-// $mail->removeTo($from);
 
 // if (isset($_POST["from"]))
 // {
