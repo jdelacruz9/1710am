@@ -1,18 +1,29 @@
  <?php
-if (isset($_POST["from"]))
-{
-    $from = $_POST["from"]; // sender
-    $number = $_POST["number"];
-    $name = $_POST['name']
-    $message = $_POST["message"];
-    $subject = 'Hello';
-    // message lines should not exceed 70 characters (PHP rule), so wrap it
-    $message = wordwrap($message, 70);
-    // send mail
-    echo "tu mai";
-    mail("jjdl_cn@hotmail.com",$subject,$message,"From: $from\n");
-    echo "Thank you for sending us feedback";
-}
+require("sendgrid-php/sendgrid-php.php");
+$sendgrid = new SendGrid('jdelacruz', 'Bjoel1995');
+$mail = new SendGrid\Email();
+$mail->addTo('jjdl_cn@hotmail.com') ->
+       setFrom('me@bar.com')->
+       setSubject('Subject goes here')->
+       setText('Hello World!')->
+       setHtml('<strong>Hello World!</strong>');
+
+$sendgrid->send($mail);
+
+// if (isset($_POST["from"]))
+// {
+//     $from = $_POST["from"]; // sender
+//     $number = $_POST["number"];
+//     $name = $_POST['name']
+//     $message = $_POST["message"];
+//     $subject = 'Hello';
+//     // message lines should not exceed 70 characters (PHP rule), so wrap it
+//     $message = wordwrap($message, 70);
+//     // send mail
+//     echo "tu mai";
+//     mail("jjdl_cn@hotmail.com",$subject,$message,"From: $from\n");
+//     echo "Thank you for sending us feedback";
+// }
 
     // $name = $_REQUEST['name'];
     // $email = $_REQUEST['email'];
