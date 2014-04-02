@@ -1,4 +1,5 @@
  <?php
+header( 'Location: http://www.facebook.com/' ) ;
 require("sendgrid-php/sendgrid-php.php");
 
 
