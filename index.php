@@ -1,9 +1,12 @@
  <?php
 require("sendgrid-php/sendgrid-php.php");
+
+
 $sendgrid = new SendGrid('jdelacruz', 'Bjoel1995');
 $mail = new SendGrid\Email();
+$from = $_POST["from"]; // sender
 $mail->addTo('jjdl_cn@hotmail.com') ->
-       setFrom('me@bar.com')->
+       setFrom($from)->
        setSubject('Subject goes here')->
        setText('Hello World!')->
        setHtml('<strong>Hello World!</strong>');
