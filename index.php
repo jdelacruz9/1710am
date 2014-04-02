@@ -12,8 +12,8 @@ $message = $_POST["message"];
 
 $mail->addTo('jjdl_cn@hotmail.com');
 $mail->setFrom($from);
-$mail->setSubject('Subject goes here');
-$mail->setText('Hello World!');
+$mail->setSubject('Hola');
+$mail->setText($message);
 $mail->setHtml('<strong>Hello World!</strong>');
 
 $sendgrid->send($mail);
