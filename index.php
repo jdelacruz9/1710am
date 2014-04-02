@@ -8,13 +8,13 @@ $mail = new SendGrid\Email();
 
 $name = $_POST['name'];
 $from = $_POST['email']; 
-$message = $_POST["message"];
+$message = $_POST['message'];
 
 $mail->addTo('jjdl_cn@hotmail.com');
 $mail->setFrom($from);
 $mail->setSubject('Hola');
 $mail->setText($message);
-$mail->setHtml('<strong>Hello World!</strong>');
+$mail->setHtml('<strong>'.$message.'</strong>');
 
 $sendgrid->send($mail);
 
