@@ -8,7 +8,8 @@ $mail = new SendGrid\Email();
 $name = $_POST['name'];
 $from = $_POST["from"]; 
 $message = $_POST["message"];
-$mail->addTo('jjdl_cn@hotmail.com') ->
+
+$mail->addTo('jjdl_cn@hotmail.com')->
        setFrom('me@bar.com')->
        setSubject('Subject goes here')->
        setText('Hello World!')->
