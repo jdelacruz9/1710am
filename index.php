@@ -9,11 +9,11 @@ $name = $_POST['name'];
 $from = $_POST["from"]; 
 $message = $_POST["message"];
 
-$mail->addTo('jjdl_cn@hotmail.com')->
-       setFrom($from)->
-       setSubject('Subject goes here')->
-       setText('Hello World!')->
-       setHtml('<strong>Hello World!</strong>');
+$mail->addTo('jjdl_cn@hotmail.com');
+$mail->setFrom($from);
+$mail->setSubject('Subject goes here');
+$mail->setText('Hello World!');
+$mail->setHtml('<strong>Hello World!</strong>');
 
 $sendgrid->send($mail);
 
