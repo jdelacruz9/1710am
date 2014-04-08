@@ -40,6 +40,33 @@
     </div>
     <!-- /Side Menu -->
 
+<div id="myCarousel" class="carousel slide">  
+  <!-- Carousel items -->  
+  <div class="carousel-inner">  
+    <div class="item">  
+        <img src="pic/foto1.jpg" alt="" />
+      <div class="carousel-caption">
+        <p>Caption text here</p></div>  
+    </div>
+      <div class="item">
+        <img src="pic/foto2.jpg" alt="" />
+      </div>  
+       <div class="active item">
+        <img src="pic/foto3.png" alt="" />
+      </div> 
+      <div class="item">
+        <img src="pic/foto4.png" alt="" />
+      </div> 
+    </div>  
+
+  </div>  
+  <!-- Carousel nav -->  
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+</div>  
+
+
+
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
         <div class="vert-text">
@@ -274,7 +301,7 @@ de Lunes a Viernesa dia</p>
                     </h2>
                     <hr>
                     <p>This contact form is just the form elements, it is not a working form. You will have to make the form work by yourself, or take it out if you can't figure out how to make it work.</p>
-                    <form method="post" action="index.php">
+                    <form method="post">
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Name</label>
@@ -328,8 +355,17 @@ de Lunes a Viernesa dia</p>
     <!-- /Footer -->
 
     <!-- JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+    </script>
 
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
     <script>
