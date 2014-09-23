@@ -8,8 +8,9 @@ body {
 
 .vert-text {
   display: table-cell;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   text-align: center;
+  padding-top: 20px;
 }
 
 .vert-text h1 {
@@ -111,7 +112,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  background: url(../pic/cover.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -144,7 +145,7 @@ i.service-icon {
   width: 140px;
   height: 140px;
   line-height: 136px;
-  vertical-align: middle; 
+  vertical-align: middle;
   text-align: center;
 }
 
@@ -155,7 +156,8 @@ i.service-icon {
   display: table;
   height: 400px;
   width: 100%;
-  background: url(../img/callout.jpg) no-repeat center center fixed; 
+  background-image: url(../pic/openBible.jpg);
+  /*background: url(../pic/openBible.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -220,13 +222,13 @@ i.scroll:hover {
 /* Responsive */
 
 @media (max-width: 768px) {
-	
+
   .header {
-	background: url(../img/bg.jpg) no-repeat center center scroll; 
+	background: url(../pic/cover.jpg) no-repeat center center scroll;
   }
 
   .callout {
-	background: url(../img/callout.jpg) no-repeat center center scroll; 
+	background: url(../pic/openBible.jpg) no-repeat center center scroll;
   }
 
   .map {
@@ -259,4 +261,33 @@ i.scroll:hover {
 
 .section {
   margin: 50px 0;
+}
+
+#text-1710am{
+  font-size: 100px;
+  text-align: right;
+}
+
+#text-tar{
+  font-size: 100px;
+  text-align: left;
+}
+
+.header-text{
+  display: table-cell;
+  /*vertical-align: middle;*/
+  text-align: center;
+}
+
+#vr{
+  border-left: 1px;
+  height: 335px;
+  width: 0px;
+  border-style: solid;
+
+  /*<div style="border-left:1px solid #000;height:500px"></div>*/
+}
+
+#vr-col{
+  width: 0px;
 }
